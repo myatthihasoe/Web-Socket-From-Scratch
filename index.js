@@ -10,8 +10,8 @@ let server = app.listen(4000, () => {
 })
 
 /*--routes setup--*/
-app.get('/', (req,res) => {
-    res.sendFile(__dirname + '/public/index.html')
+app.get('/', (res,req) => {
+    req.sendFile(__dirname + '/public/index.html')
 })
 
 /*--web socket setup--*/
